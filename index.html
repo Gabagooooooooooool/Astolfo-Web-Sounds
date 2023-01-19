@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Astolfo (gay) Sounds HTML Port</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+      <style>
+         .p1 {font-family: 'Varela Round', sans-serif; }
+         .test {
+         background-color: lightpink;
+         display: flow;
+         }
+         body {
+         height:100%;
+         margin:0;
+         padding:10
+         }
+         h1 {
+         margin:0;
+         padding:10;	
+         text-align: center;
+         }
+         img {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 50%;
+         }
+         .float{
+         position:fixed;
+         width:60px;
+         height:60px;
+         bottom:40px;
+         right:40px;
+         background-color: lightpink;
+         color:#FFF;
+         border-radius:50px;
+         text-align:center;
+         box-shadow: 2px 2px 3px #999;
+         }
+         .my-float{
+         margin-top:22px;
+         }
+      </style>
+   </head>
+   <body class="p1">
+      <header class="test">
+         <h1>Astolfo (Gay) Sounds HTML Port</h1>
+      </header>
+      <h2 style="text-align: center">
+         <div id="result"></div>
+      </h2>
+      <script>
+         mySounds = [ 'gs1', 'gs2', 'gs3', 'gs4', 'gd5', 'gd6', 'gs7', 'gd8','gs9','gs10','gs11','gs12','gs13' ]
+         function play() {
+          var index = Math.floor(Math.random() * 1000) % mySounds.length;
+          var id = mySounds[index];
+          var audioElement = document.getElementById(id);
+          audioElement.play();
+         }
+         
+      </script>
+      <script>
+         function clickCounter() {
+         	  if (typeof(Storage) !== "undefined") {
+         		if (localStorage.clickcount) {
+         		  localStorage.clickcount = Number(localStorage.clickcount)+1;
+         		} else {
+         		  localStorage.clickcount = 1;
+         		}
+         		document.getElementById("result").innerHTML = "Click count: " + localStorage.clickcount + "";
+         	  } else {
+         		document.getElementById("result").innerHTML = "Click count: %NOTSUPPORTED";
+         	  }
+         	}
+      </script>
+      <img src="main_picture.png" onclick="play();clickCounter();">
+      <audio id="gs1" src="res/gay_sound_1.mp3"></audio>
+      <audio id="gs2" src="res/gay_sound_2.mp3"></audio>
+      <audio id="gs3" src="res/gay_sound_3.mp3"></audio>
+      <audio id="gs4" src="res/gay_sound_4.mp3"></audio>
+      <audio id="gs5" src="res/gay_sound_5.mp3"></audio>
+      <audio id="gs6" src="res/gay_sound_6.mp3"></audio>
+      <audio id="gs7" src="res/gay_sound_7.mp3"></audio>
+      <audio id="gs8" src="res/gay_sound_8.mp3"></audio>
+      <audio id="gs9" src="res/gay_sound_9.mp3"></audio>
+      <audio id="gs10" src="res/gay_sound_10.mp3"></audio>
+      <audio id="gs11" src="res/gay_sound_11.mp3"></audio>
+      <audio id="gs12" src="res/gay_sound_12.mp3"></audio>
+      <audio id="gs13" src="res/gay_sound_13.mp3"></audio>
+      <hr>
+      <h3 style="text-align: center">CREDITS</h3>
+      <p style="text-align: center">bringonthepretty / gaym development.east for <a href="https://play.google.com/store/apps/details?id=com.astolfogaysounds">the original app</a></b></p>
+      <p style="text-align: center">Shino Skk and PixeL (yuxian) for assets</p>
+      <p style="text-align: center">w3schools and stackoverflow for javascript</p>
+   </body>
+</html>
